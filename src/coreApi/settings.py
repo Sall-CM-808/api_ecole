@@ -48,6 +48,10 @@ INSTALLED_APPS = [
     
     #DRF Applications
     'rest_framework',
+    #Pour l'authentification avec token
+    'rest_framework.authtoken',
+    #Pour l'authentification par Json Web Token
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +136,19 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'user.User'
+
+#Configuration des authentifications et permission de l'api
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
+
+from datetime import timedelta
+#Configuration de la durée de vie du JWT
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME':timedelta(minutes=5),
+    'REFRESH_TOKEN_LIFETIME':timedelta(days=1),
+}

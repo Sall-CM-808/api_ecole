@@ -1,0 +1,47 @@
+        Yo dans ce file je mettrai tout ce que je ferai
+1-) La creation des tables:
+        User
+        Professor
+        Student
+        SchoolManager
+    bref comme mon role etait de gerer les authentifications et tout bah je me charge
+        de ca
+2-) La mise en place des clés etrangères
+    Chaque table qui est associée a une personne qui doit se connecter plus tard
+        a l'application a la table User comme clé etrangere. et c'est dans cette table
+        que les informations personnelles de l'interessé sont saisies.
+        Pour les tables secondaires Professor et autres ils contiennent les informations
+        secondaires de l'interessé.
+        Ainsi lors de l'affichage et autres on usera des jointures pour tout afficher.
+        cela me permet d'eviter la repetition des données et tout et ca c'est super cool
+3-) La mise en place des Systemes d'authentification:
+    >le SessionAuthentication:
+        Celui-ci est géré par defaut par django du coup j'ai pas trop eu besoin de le mettre
+    >le TokenAuthentication:
+        Celui-ci je l'ai géré en allant dans les parametres du projet et en installant le
+        rest_framework.authtoken et apres après dans le url j'ai usé la vu obtain_token pour
+        faire en sorte que l'interessé ai un token lors de son authentification. mais bon c'est
+        pas trop class askip du coup on pass 
+    >le JWT(Json Web token):
+        Encore plus class que le precedent, celui-ci crée des tokens avec des durées de vie. bref
+        il est subdivisé en trois:
+            le access token qui nous permet d'avoir acces avec une durée limité
+            le refresh token qui permet de faire renaitre un token apres sa mort
+            le verify qui est une vue qui verify l'authenticité du token
+        Hum bon pour le mettre en place j'ai du:
+            installer le simple_jwt avec pip
+            et je suis aussi allé le planter dans les parametres comme install apps
+            je l'ai aussi mis comme moyen d'authentification avec le REST_FRAMEWORK{
+                'DEFAULT_AUTHENTICATION_CLASSES':[
+                    'bref je l'ai planté là
+                ]
+            }
+        Puis dans l'appli user j'ai géré le bail en creant des urls pour eux 
+        mais bon les vus sont deja faites hein je ne faisait qu'appeler les class
+4-) Le CRUD sur la table user:
+    Maintenant essayons de gérer le CRUD sur cette table. ca va chauffer mais bon on
+    y arriver
+    >Creation du UserSeralizer:
+4-) La Gestion des Permissions:
+    Hum c'est là qui sera un peu chaud mais bon je vais peut-être y arriver hein
+        bon j'arrive et quand j'y arrive je viendra noter commment je m'y suis pris
