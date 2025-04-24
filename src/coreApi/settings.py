@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'manager',
     'matiere',
     'classe',
+    'tutor',
     
     #DRF Applications
     'rest_framework',
