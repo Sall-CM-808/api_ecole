@@ -1,13 +1,20 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 
-from .models import Note
-from .serializers import NoteSerializers
+from .models import NoteCours, NoteCompos
+from .serializers import NoteCoursSerializers, NoteComposSerializers
 
 
 # Create your views here.
 
 
-class NoteViewsSet(viewsets.ModelViewSet):
-    queryset = Note.objects.all()
-    serializer_class = NoteSerializers
+class NoteCoursViewsSet(viewsets.ModelViewSet):
+    queryset = NoteCours.objects.all()
+    serializer_class = NoteCoursSerializers
+
+
+
+class NoteComposViewsSet(viewsets.ModelViewSet):
+    queryset = NoteCompos.objects.all()
+    serializer_class = NoteComposSerializers
+
