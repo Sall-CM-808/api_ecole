@@ -152,3 +152,18 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME':timedelta(minutes=5),
     'REFRESH_TOKEN_LIFETIME':timedelta(days=1),
 }
+
+
+#Configuration de la partie qui permettra d'envoyer un mail au user concernant son password
+#La class qui gere l'envoi en backend
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+#Le seerveur. Dans notre cas on use le gmail.com
+EMAIL_HOST = 'smtp.gmail.com'
+#Le port par lequel le email sera envoyé
+EMAIL_PORT = 587
+#On lui dit qu''il doit utiliser le tls(je crois que c'est un truc pour le chiffrement)
+EMAIL_USE_TLS = True
+#On lui donne l'adresse mail par lequel il enverra les data
+EMAIL_HOST_USER = "thiernohadybarry465@gmail.com"
+#On lui donne le mot de pass de l'adresse mail
+EMAIL_HOST_PASSWORD = 'kynh dndo btnf meuh'

@@ -42,6 +42,13 @@
     Maintenant essayons de gérer le CRUD sur cette table. ca va chauffer mais bon on
     y arriver
     >Creation du UserSeralizer:
+        Ce machin a ete  fait et Maintenant à chaque fois que l'on crée un Utilisateur, un mot de pass
+        aleatoire lui est attribué. ca sera à lui de modifier ce mot de pass lors de la prochaine conexion
+        >Essayons maintenant de voir si c'est possible d'envoyer par mail le password qui lui a ete genere 
+        aleatoirement. Hum je sens que cette partie va grave chaffer wallah
+        mais bon allons-y apres je viendrai mettre ici comment je m'y suis pris
+
+        
 4-) La Gestion des Permissions:
     Hum c'est là qui sera un peu chaud mais bon je vais peut-être y arriver hein
         bon j'arrive et quand j'y arrive je viendra noter commment je m'y suis pris
