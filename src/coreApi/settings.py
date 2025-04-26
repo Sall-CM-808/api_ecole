@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Envoyons ici le user.signals qui contient le fichier qui supprimera un user si tel un prof ou autre est suprimé
+    'user.apps.UserConfig',
     #My own Applications
-    'user',
     'professor',
     'student',
     'manager',
@@ -165,5 +166,5 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 #On lui donne l'adresse mail par lequel il enverra les data
 EMAIL_HOST_USER = "thiernohadybarry465@gmail.com"
-#On lui donne le mot de pass de l'adresse mail
+#On lui donne le mot de pass de l'adresse mail. Pas le vrai hein juste un que j'ai genere dans mon compte gogle
 EMAIL_HOST_PASSWORD = 'kynh dndo btnf meuh'

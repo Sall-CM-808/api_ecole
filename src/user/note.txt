@@ -1,4 +1,4 @@
-        Yo dans ce file je mettrai tout ce que je ferai
+                Yo dans ce file je mettrai tout ce que je ferai
 1-) La creation des tables:
         User
         Professor
@@ -45,8 +45,19 @@
         Ce machin a ete  fait et Maintenant à chaque fois que l'on crée un Utilisateur, un mot de pass
         aleatoire lui est attribué. ca sera à lui de modifier ce mot de pass lors de la prochaine conexion
         >Essayons maintenant de voir si c'est possible d'envoyer par mail le password qui lui a ete genere 
-        aleatoirement. Hum je sens que cette partie va grave chaffer wallah
-        mais bon allons-y apres je viendrai mettre ici comment je m'y suis pris
+            aleatoirement. Hum je sens que cette partie va grave chaffer wallah
+            mais bon allons-y apres je viendrai mettre ici comment je m'y suis pris
+        >Ouf la ca va maintenant lorsque je crée un prof un user est créé et est relié au prof. et un mail
+            lui est envoyé. là ca va je go essayer de faire pareil pour le tuteur et le schoolManager 
+            à toute....
+                Yo je viens d'y parvenir. C'etait chaud mais j'y susi arrivé. J'ai aussi géré la suppressin
+            quand on supprime un professeur ou un eleve ou tuteur ou encore un manager, cela suprime automatiquement
+            le user associé et c'est cool. J'ai usé le signals de django hein. Pas trop chaud. Mais bon je vais peut-etre 
+            en profiter pour faire les logs avec ca hein. 
+            >   Hum je suis aussi parvenu à faire le crd des 3 tables. Pour le update je crois que je vais un peu reflechir
+            la dessus. faire en sorte que ca soit un partial update(patch) ou un put(total update) bref j'y reflechi
+            là j'ai plus trop d'inspi. Mais c'est Ouf. J'ai fait des trucs de Ouf c'est super dingue wesh j'avais l'extase aujoud'hui
+            Maintenant je sais pas trop quoi faire. les mise à jours ou la gestion des Permissions. Ouf flemmme
 
         
 4-) La Gestion des Permissions:

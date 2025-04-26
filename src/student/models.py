@@ -7,3 +7,6 @@ from classe.models import Classes
 class Students(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
     classe = models.OneToOneField(Classes,on_delete=models.CASCADE)
+
+    def __str__(self):
+        return str(self.user.username)
