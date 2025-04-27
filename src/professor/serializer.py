@@ -10,7 +10,7 @@ class ProfessorCreationSerializer(serializers.ModelSerializer):
     user = UserCreationSerializer()
     class Meta:
         model = Professors
-        fields = ('user','subject','level','phone_nuber')
+        fields = ('user','phone_nuber')
         
     #Maintenant ici on envera chaque donnée ou il faut
     def create(self, validated_data):

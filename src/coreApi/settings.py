@@ -43,8 +43,6 @@ INSTALLED_APPS = [
     'professor',
     'student',
     'manager',
-    'matiere',
-    'classe',
     'tutor',
     
     #DRF Applications

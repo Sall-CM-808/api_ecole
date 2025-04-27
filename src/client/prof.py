@@ -12,8 +12,6 @@ data = {
         'profile_picture':None,
         'email':'hadi@gmail.com'
     },
-    "subject": 1,
-    "level": 1,
     "phone_nuber": "+224620260243"
     
 }

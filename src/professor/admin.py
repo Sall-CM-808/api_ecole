@@ -4,7 +4,7 @@ from professor.models import Professors
 # Register your models here.
 
 class ProfessorAdmin(admin.ModelAdmin):
-    list_display = ('user','subject','level')
+    list_display = ('user','phone_nuber')
     model = Professors
     
 admin.site.register(Professors,ProfessorAdmin)
