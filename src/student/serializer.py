@@ -34,3 +34,23 @@ class StudentCreationSerializer(serializers.ModelSerializer):
             
         return student
     
+    def update(self, instance, validated_data):
+        user_data = validated_data.pop('user', None)
+        
+        with transaction.atomic():
+            # Mise à jour de l'eleve
+            instance = super().update(instance, validated_data)
+            
+            # Mise à jour du User
+            if user_data and getattr(instance, 'user', None):
+                user_serializer = UserCreationSerializer(
+                    instance.user,
+                    data=user_data,
+                    partial=True,
+                    context=self.context  # Passe le contexte (important pour les SerializerMethodField)
+                )
+                user_serializer.is_valid(raise_exception=True)
+                user_serializer.save()
+                
+        return instance        
+    

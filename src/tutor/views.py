@@ -11,6 +11,7 @@ class TutorMixin(
     mixins.RetrieveModelMixin,
     mixins.DestroyModelMixin,
     mixins.ListModelMixin,
+    mixins.UpdateModelMixin,
 ):
     queryset = Tutors.objects.all()
     serializer_class = TutorCreationSerializer
@@ -25,3 +26,6 @@ class TutorMixin(
 
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
+    
+    def put(self,request,*args,**kwargs):
+        return self.update(request,*args,**kwargs)

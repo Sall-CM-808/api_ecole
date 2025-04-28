@@ -6,4 +6,5 @@ urlpatterns = [
     path('show/<int:pk>',views.ProfessorMixin.as_view(),name='show_professor'),
     path('list',views.ProfessorMixin.as_view(),name='list_professor'),
     path('delete/<int:pk>',views.ProfessorMixin.as_view(),name='delete_professor'),
+    path('update/<int:pk>',views.ProfessorMixin.as_view(),name='update_professor'),
 ]

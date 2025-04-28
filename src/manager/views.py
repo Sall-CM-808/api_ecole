@@ -10,7 +10,8 @@ class SchoolManagerMixin(
     mixins.CreateModelMixin,
     mixins.ListModelMixin,
     mixins.RetrieveModelMixin,
-    mixins.DestroyModelMixin
+    mixins.DestroyModelMixin,
+    mixins.UpdateModelMixin,
 ):
     serializer_class = SchoolManagerCreationSerializer
     queryset = SchoolManagers.objects.all()
@@ -25,3 +26,6 @@ class SchoolManagerMixin(
 
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
+    
+    def put(self,request,*args,**kwargs):
+        return self.update(request,*args,**kwargs)

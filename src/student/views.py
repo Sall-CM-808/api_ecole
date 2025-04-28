@@ -11,6 +11,7 @@ class StudentMixin(
     mixins.ListModelMixin,
     mixins.CreateModelMixin,
     mixins.DestroyModelMixin,
+    mixins.UpdateModelMixin,
 ):
     queryset = Students.objects.all()
     serializer_class = StudentCreationSerializer
@@ -27,3 +28,5 @@ class StudentMixin(
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
     
+    def put(self,request,*args,**kwargs):
+        return self.update(request,*args,**kwargs)

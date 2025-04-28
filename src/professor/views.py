@@ -11,7 +11,8 @@ class ProfessorMixin(
     mixins.RetrieveModelMixin,
     mixins.ListModelMixin,
     mixins.DestroyModelMixin,
-    generics.GenericAPIView
+    generics.GenericAPIView,
+    mixins.UpdateModelMixin,
 ):
     queryset = Professors.objects.all()
     serializer_class = ProfessorCreationSerializer
@@ -28,4 +29,5 @@ class ProfessorMixin(
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
     
-    
+    def put(self,request,*args,**kwargs):
+        return self.update(request,*args,**kwargs)
