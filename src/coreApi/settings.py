@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     #Envoyons ici le user.signals qui contient le fichier qui supprimera un user si tel un prof ou autre est suprimé
     'user.apps.UserConfig',
     #My own Applications
@@ -51,6 +52,13 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     #Pour l'authentification par Json Web Token
     'rest_framework_simplejwt',
+=======
+    'rest_framework',
+    'matiere',
+    'classe',
+    'note',
+    'evaluation'
+>>>>>>> a71fe55a5ff9da5affa9962e7941512fa64bc7c8
 ]
 
 MIDDLEWARE = [
